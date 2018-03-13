@@ -295,6 +295,9 @@ public class WebdavServlet extends DefaultServlet {
     protected void service(final HttpServletRequest req, final HttpServletResponse resp)
                 throws ServletException, IOException
     {
+	    resp.addHeader("Access-Control-Allow-Origin", "*");
+	    resp.addHeader("Access-Control-Allow-Methods", "*");
+	    resp.addHeader("Access-Control-Allow-Headers", "*");
 
         final String path = getRelativePath(req);
 
