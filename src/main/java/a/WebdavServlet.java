@@ -2335,6 +2335,7 @@ public class WebdavServlet extends DefaultServlet {
             return;
 
         final WebResource resource = this.resources.getResource(path);
+        System.out.println("SRIDHAR: parseProperties() - " + path);
         if (!resource.exists()) {
             // File is in directory listing but doesn't appear to exist
             // Broken symlink or odd permission settings?

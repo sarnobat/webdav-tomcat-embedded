@@ -18,6 +18,32 @@
 	</properties>
 
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>9.4.8.v20171121</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+			<version>9.4.8.v20171121</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlets</artifactId>
+			<version>9.4.8.v20171121</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-core</artifactId>
@@ -67,43 +93,38 @@
 			<plugins>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
+
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
 				</plugin>
 
 
-<plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.6.0</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <executable>maven</executable>
-          <mainClass>a.App</mainClass>
-        </configuration>
-      </plugin>
-      
-			<!--<plugin>
-  <groupId>org.codehaus.mojo</groupId>
-  <artifactId>exec-maven-plugin</artifactId>
-  <version>1.4</version>
-  <configuration>
-    <mainClass>a.App</mainClass>
-  </configuration>
-</plugin>-->
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.6.0</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>exec</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<executable>maven</executable>
+						<mainClass>a.App</mainClass>
+					</configuration>
+				</plugin>
+
+				<!--<plugin> <groupId>org.codehaus.mojo</groupId> <artifactId>exec-maven-plugin</artifactId> 
+					<version>1.4</version> <configuration> <mainClass>a.App</mainClass> </configuration> 
+					</plugin> -->
 
 
 			</plugins>
-			
+
 		</pluginManagement>
 	</build>
 </project>
