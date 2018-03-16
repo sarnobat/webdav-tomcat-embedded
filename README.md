@@ -1,1 +1,1 @@
-# webdav-tomcat-embedded
+mvn  --settings ~/sarnobat.git/mac/.m2/settings.xml exec:java
