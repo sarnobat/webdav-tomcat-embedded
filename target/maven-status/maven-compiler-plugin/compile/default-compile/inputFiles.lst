@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 /home/sarnobat/github/webdav-tomcat-embedded/src/main/java/a/App.java
 /home/sarnobat/github/webdav-tomcat-embedded/src/main/java/a/WebdavServlet.java
+=======
+/sarnobat.garagebandbroken/Desktop/github-repositories/webdav-tomcat-embedded/src/main/java/a/WebdavServlet.java
+/sarnobat.garagebandbroken/Desktop/github-repositories/webdav-tomcat-embedded/src/main/java/a/App.java
+/sarnobat.garagebandbroken/Desktop/github-repositories/webdav-tomcat-embedded/src/main/java/a/AppJetty.java
+>>>>>>> 9f4e17b1dbf916eb4d41572829c1ebb71458aac0

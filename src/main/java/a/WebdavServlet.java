@@ -295,6 +295,9 @@ public class WebdavServlet extends DefaultServlet {
     protected void service(final HttpServletRequest req, final HttpServletResponse resp)
                 throws ServletException, IOException
     {
+	    resp.addHeader("Access-Control-Allow-Origin", "*");
+	    resp.addHeader("Access-Control-Allow-Methods", "*");
+	    resp.addHeader("Access-Control-Allow-Headers", "*");
 
         final String path = getRelativePath(req);
 
@@ -2332,6 +2335,7 @@ public class WebdavServlet extends DefaultServlet {
             return;
 
         final WebResource resource = this.resources.getResource(path);
+        System.out.println("SRIDHAR: parseProperties() - " + path);
         if (!resource.exists()) {
             // File is in directory listing but doesn't appear to exist
             // Broken symlink or odd permission settings?
